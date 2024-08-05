@@ -11,10 +11,6 @@ header {
     padding: 10px 0;
 }
 
-nav {
-    background-color: blue;
-}
-
 nav ul {
     list-style: none;
     padding: 0;
