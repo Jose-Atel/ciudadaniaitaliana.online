@@ -1,12 +1,23 @@
+/* Definición de variables en el root */
+:root {
+    --primary-color: #0066cc;
+    --secondary-color: #f4f4f4; /* Ejemplo de color secundario */
+    --text-color: #333; /* Ejemplo de color de texto */
+    --font-family: Arial, sans-serif; /* Ejemplo de fuente */
+    --font-size: 16px; /* Tamaño de fuente base */
+}
+
+/* Estilos generales */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    color: var(--text-color);
     margin: 0;
     padding: 0;
 }
 
 header {
-    background: #333;
+    background: var(--primary-color);
     color: #fff;
     padding: 10px 0;
 }
@@ -28,12 +39,38 @@ nav ul li a {
     text-decoration: none;
 }
 
-main {
+.hero {
     padding: 20px;
+    text-align: center;
+}
+
+.cta-button {
+    background-color: #fff;
+    color: var(--primary-color);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.features {
+    padding: 20px;
+    text-align: center;
+}
+
+.feature {
+    margin-bottom: 20px;
+}
+
+.feature img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
 }
 
 footer {
-    background: #333;
+    background: var(--primary-color);
     color: #fff;
     text-align: center;
     padding: 10px 0;
