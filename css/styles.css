@@ -5,6 +5,7 @@
     --text-color: #333; /* Ejemplo de color de texto */
     --font-family: Arial, sans-serif; /* Ejemplo de fuente */
     --font-size: 16px; /* Tamaño de fuente base */
+    --hero-bg-image: url('img/hero-background.jpg'); /* Imagen de fondo para el hero */
 }
 
 /* Estilos generales */
@@ -20,6 +21,21 @@ header {
     background: var(--primary-color);
     color: #fff;
     padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+header .logo {
+    font-size: 1.5em;
+    color: #fff;
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    align-items: center;
 }
 
 nav ul {
@@ -27,7 +43,6 @@ nav ul {
     padding: 0;
     margin: 0;
     display: flex;
-    justify-content: center;
 }
 
 nav ul li {
@@ -37,11 +52,23 @@ nav ul li {
 nav ul li a {
     color: #fff;
     text-decoration: none;
+    font-weight: bold;
 }
 
 .hero {
-    padding: 20px;
+    background: var(--hero-bg-image) no-repeat center center/cover;
+    color: #fff;
+    padding: 80px 20px; /* Añadido más padding para espacio en el hero */
     text-align: center;
+}
+
+.hero h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+.hero p {
+    font-size: 1.2em;
 }
 
 .cta-button {
@@ -52,6 +79,8 @@ nav ul li a {
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
+    display: inline-block;
+    margin-top: 20px;
 }
 
 .features {
