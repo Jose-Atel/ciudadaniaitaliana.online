@@ -1,0 +1,31 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Ajusta esto si tu rama principal tiene otro nombre
+
+jobs:
+  build:
+    runs-on: self-hosted  # Usa el runner auto-hospedado
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'  # Puedes cambiar a la versión que necesites
+
+      - name: Install dependencies
+        run: npm install  # Ajusta este comando si no estás usando Node.js
+
+      - name: Build the site
+        run: npm run build  # Cambia este comando según tu script de construcción
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public  # Ajusta esto a tu directorio de salida
