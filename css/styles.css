@@ -1,9 +1,9 @@
 /* Definición de variables en el root */
 :root {
-    --primary-color: #0c5096;
-    --secondary-color: #203c88; /* Ejemplo de color secundario */
+    --primary-color: #00205C;
+    --secondary-color: #0057B7; /* Ejemplo de color secundario */
     --text-color: #f2f2f2; /* Ejemplo de color de texto */
-    --golden-text: #e0b06c;
+    --golden: #C4B682;
     --font-family: Arial, sans-serif; /* Ejemplo de fuente */
     --font-size: 16px; /* Tamaño de fuente base */
     --hero-bg-image: url('/img/hero.webp'); /* Imagen de fondo para el hero */
@@ -32,7 +32,7 @@
   }
   .nav > .nav-header > .nav-title {
     font-size: 22px;
-    color: var(--golden-text);
+    color: var(--golden);
     font-weight: 900;
   }
   .nav > .nav-list {
@@ -83,7 +83,7 @@ body {
 .hero h1 {
     font-size: 3rem;
     margin: 0;
-    color: var(--golden-text);
+    color: var(--golden);
 }
 .menor {
     font-size: 1.8rem;
@@ -103,14 +103,14 @@ body {
     padding: 1rem 2rem;
     font-size: 1rem;
     color: var(--text-color);
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
     border: none;
     cursor: pointer;
     font-weight: 600;
 }
 
 .hero button:hover {
-    background-color: var(--golden-text);
+    background-color: var(--golden);
     transition: all 0.3s ease-in;
     color: var(--primary-color);
     font-weight: 600;
