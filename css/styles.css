@@ -6,7 +6,7 @@
     --golden-text: #e0b06c;
     --font-family: Arial, sans-serif; /* Ejemplo de fuente */
     --font-size: 16px; /* Tamaño de fuente base */
-    --hero-bg-image: url('/img/hero.jpg'); /* Imagen de fondo para el hero */
+    --hero-bg-image: url('/img/hero.webp'); /* Imagen de fondo para el hero */
 }
 * {
     box-sizing: border-box;
