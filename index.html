@@ -42,11 +42,11 @@
   
   <div class="main__wrapper">
     <main>
-      <h1>Lorem Ipsum Times</h1>
+      <h1>Ciudadania Italiana</h1>
       <aside> 
         <div>
           <div class="issue">Issue #1</div>
-          <div class="date">Tuesday, 26 May, 2020</div>
+          <div class="date"></div>
           <div class="edition">Lorem Ipsum Edition</div>
         </div>
       </aside>
@@ -131,6 +131,48 @@
     </main>
   </div>
 </body>
-
+<script>
+  // Función para obtener la fecha con sufijo (st, nd, rd, th)
+  function getDateWithSuffix(day) {
+      if (day >= 11 && day <= 13) {
+          return day + 'th';
+      }
+      switch (day % 10) {
+          case 1: return day + 'st';
+          case 2: return day + 'nd';
+          case 3: return day + 'rd';
+          default: return day + 'th';
+      }
+  }
+  
+  // Función para formatear la fecha
+  function formatDate() {
+      const now = new Date();
+      const options = { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' };
+      const formatter = new Intl.DateTimeFormat('en-GB', options);
+      const parts = formatter.formatToParts(now);
+  
+      // Extraer los componentes de la fecha
+      const weekday = parts.find(part => part.type === 'weekday').value;
+      const day = parts.find(part => part.type === 'day').value;
+      const month = parts.find(part => part.type === 'month').value;
+      const year = parts.find(part => part.type === 'year').value;
+  
+      // Obtener el día con sufijo
+      const dayWithSuffix = getDateWithSuffix(day);
+  
+      // Construir la fecha formateada
+      return `${weekday}, ${dayWithSuffix} ${month}, ${year}`;
+  }
+  
+  // Actualizar el contenido del elemento con la clase "date"
+  document.addEventListener('DOMContentLoaded', () => {
+      const dateElement = document.querySelector('.date');
+      if (dateElement) {
+          dateElement.textContent = formatDate();
+      }
+  });
+  </script>
+  
 
 </html>
