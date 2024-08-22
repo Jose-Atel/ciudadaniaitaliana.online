@@ -1,0 +1,178 @@
+/* basic.css */
+:root {
+    --primary-color: #1A237E;
+    --secondary-color: #0066cc;
+    --text-color: #333;
+    --background-color: #fff;
+    --font-family: Arial, sans-serif;
+    --font-size: 16px;
+}
+
+body {
+    font-family: var(--font-family);
+    color: var(--text-color);
+    background-color: var(--background-color);
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    width: 100%;
+    background: inherit;
+    position:fixed;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.menu-icon span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+}
+
+.hero {
+    background-image: url(../imagenes/header-home.jpg);
+    background-size: cover;
+    background-position: center;
+    background-position-y: 10dvh;
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-attachment: fixed; /* Añade el efecto parallax */
+    position: relative; /* Para que el pseudo-elemento se posicione correctamente */
+    align-items: center;
+}
+
+.hero::before {
+    content: ''; /* Necesario para mostrar el pseudo-elemento */
+    position: absolute; /* Posiciona el overlay sobre el contenido */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Negro con 50% de opacidad */
+    transition: background-color 0.5s ease; /* Transición suave del color de fondo */
+    z-index: 1; /* Asegura que el overlay esté encima de la imagen */
+}
+
+.hero.dark-overlay::before {
+    background-color: rgba(0, 0, 0, 0.9); /* Negro completamente opaco */
+    backdrop-filter: blur(8px); /* Aplica desenfoque al fondo */
+}
+
+.hero-content {
+    position: relative; /* Asegura que el contenido esté encima del overlay */
+    z-index: 2; /* Asegura que el contenido esté encima del overlay */
+    color: #fff; /* Color del texto para contraste */
+    padding: 1em;
+    margin-top: 5em;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.scroll-indicator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.scroll-indicator img {
+    width: 70px;
+    animation: bounce 5s infinite;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+.ch1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Estilos generales del footer */
+footer {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Estilos generales del footer */
+footer {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Estilos para el menú de enlaces en el footer */
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem; /* Espacio entre los enlaces */
+}
+
+.footer-links li {
+    margin: 0;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #ddd; /* Color de los enlaces al pasar el ratón */
+}
+
+
