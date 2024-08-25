@@ -13,10 +13,6 @@
     .section-content {
         width: 50%;
     }
-    
-}
-
-@media (min-width: 1024px) {
     main {
         max-width: 1024px;
         margin: 0 auto;
@@ -36,14 +32,20 @@
         font-size: 1.5rem;
         margin-bottom: 1rem;
     }
-
-    .footer-links {
-        flex-direction: column; /* Cambia a columna en vista móvil */
-        align-items: center;    /* Centra los elementos */
+    .footer-container {
+        flex-direction: column; /* Apila las secciones verticalmente */
+    }
+    .comment-avatar img {
+        width: 40px;
+        height: 40px;
     }
 
-    .footer-links a {
-        display: block;         /* Cada enlace en una línea */
-        margin: 0.5rem 0;       /* Espacio entre los enlaces */
+    .comments-section {
+        padding: 2em;
+        background-color: var(--comment-color);
+        margin: 2em 0;
+        border-radius: 0;
+        border-top: 5px solid transparent;
+        border-image: url(/imagenes/border-footer.jpg) 30 round;
     }
 }

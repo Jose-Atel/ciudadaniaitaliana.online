@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Ponte en contacto conmigo para resolver tus dudas sobre el proceso de ciudadanía italiana.">
+    <meta name="description" content="Ponte en contacto con Ciudadanía Italiana Online. Resolvemos tus dudas sobre el proceso de ciudadanía italiana.">
     <meta name="keywords" content="Ciudadanía Italiana, Italia, Contacto, Formulario de contacto">
     <meta name="author" content="Ciudadanía Italiana Online">
     
     <!-- Metadatos Open Graph para redes sociales -->
     <meta property="og:title" content="Contacto - Ciudadanía Italiana Online">
-    <meta property="og:description" content="¿Tienes alguna duda sobre la ciudadanía italiana? Escríbeme y te ayudaré.">
+    <meta property="og:description" content="¿Tienes alguna duda o consulta sobre la ciudadanía italiana? Contáctanos y te ayudaremos.">
     <meta property="og:image" content="https://ciudadaniaitaliana.online/imagenes/contacto.jpg">
     <meta property="og:url" content="https://ciudadaniaitaliana.online/contacto.html">
     
@@ -22,9 +22,30 @@
     <!-- Enlaces a archivos CSS -->
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/basic.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/contacto.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Datos estructurados JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      "name": "Contacto - Ciudadanía Italiana Online",
+      "description": "Ponte en contacto con Ciudadanía Italiana Online para resolver tus dudas sobre el proceso de ciudadanía italiana.",
+      "url": "https://ciudadaniaitaliana.online/contacto.html",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Customer Service",
+        "email": "kbjoseuy@gmail.com",
+        "availableLanguage": "Español"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Ciudadanía Italiana Online",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://ciudadaniaitaliana.online/imagenes/logo.png"
+        }
+      }
+    }
+    </script>
 </head>    
 <body>
     <header>
@@ -43,14 +64,14 @@
         </nav>        
         <div class="hero">
             <div class="hero-content">
-                <h1 class="ch1">Contacto</h1>
+                <h1 class="ch1">Contácto</h1>
             </div>
         </div>
     </header>
     <main>
         <section class="section">
             <h2>¿Tienes alguna pregunta o consulta?</h2>
-            <p>Si tienes alguna duda o consulta sobre la ciudadanía italiana, puedes enviarme un mensaje a través del siguiente formulario. Estaré encantado de ayudarte.</p>
+            <p>Ponte en contacto con nosotros a través del siguiente formulario. Estamos aquí para ayudarte en tu proceso de obtención de la ciudadanía italiana.</p>
         </section>
         
         <section class="contact-form-section">
@@ -70,12 +91,15 @@
     </main>
     <footer>
         <ul class="footer-links">
-            <li><a href="/privacy-policy">Política de Privacidad</a></li>
-            <li><a href="/disclaimer">Aviso Legal</a></li>
-            <li><a href="/contact">Contacto</a></li>
+            <li><a href="https://ciudadaniaitaliana.online/privacy-policy.html">Política de Privacidad</a></li>
+            <li><a href="https://ciudadaniaitaliana.online/disclaimer.html">Aviso Legal</a></li>
+            <li><a href="https://ciudadaniaitaliana.online/contact.html">Contacto</a></li>
         </ul>
     </footer>
     <script src="js/menu.js"></script>
     <script src="js/interacion.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/contacto.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </body>
 </html>
